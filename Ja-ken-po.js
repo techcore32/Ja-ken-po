@@ -3,7 +3,26 @@
 let options = ["rock", "paper", "scissors"];
 const computerSelection = computerPlay();
 //The player must be able to choose between the three options (written or clickable) "playerSelection"
+//selection must compare and return expected result from the options variable
+let playerSelection = prompt("Pick any of the three");
 
+if (playerSelection.toLowerCase() === "rock") {
+    playerSelection = options[0];
+    
+}
+else if (playerSelection.toLowerCase() === "paper"){
+    playerSelection = options[1];
+}
+
+else if (playerSelection.toLowerCase() === "scissors"){
+    playerSelection = options[2];
+    
+}
+else {
+    alert("Remember to play you must pick either rock, paper or scissors");
+}
+
+console.log (playerSelection);
 
 //The computer must respond with a random string between those three options "computerPlay"
 function computerPlay(){
@@ -16,8 +35,26 @@ console.log (computerSelection);
 
 // rock beats scissors, scissors beats paper, paper beats rock. Else draw.
 //the result has to be shown 
+function playRound(playerSelection,computerSelection){
+    
+    if(playerSelection === computerSelection){
+        return "It\'s a draw";
+    }
 
+    else if (playerSelection === "scissors" && computerSelection === "paper" ||
+             playerSelection === "paper" && computerSelection === "rock" || 
+             playerSelection === "rock" && computerSelection === "scissors"){
+        
+                return "Congratulations, you win!";
+   
+            }
 
+    else{
+        return "Good luck next time";
+    }
+}
+
+console.log(playRound(playerSelection,computerSelection));
 
 //the game must be 5 rounds 
 
