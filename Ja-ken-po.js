@@ -1,10 +1,16 @@
 //The game is about picking rock, paper, scissors between the computer and a player
 
+//the game must be 5 rounds 
+for(i = 1; i <= 5; i++){
+    
 let options = ["rock", "paper", "scissors"];
 const computerSelection = computerPlay();
+
 //The player must be able to choose between the three options (written or clickable) "playerSelection"
 //selection must compare and return expected result from the options variable
-let playerSelection = prompt("Pick any of the three");
+
+
+let playerSelection =  prompt("Pick any of the three");
 
 if (playerSelection.toLowerCase() === "rock") {
     playerSelection = options[0];
@@ -35,8 +41,12 @@ console.log (computerSelection);
 
 // rock beats scissors, scissors beats paper, paper beats rock. Else draw.
 //the result has to be shown 
-function playRound(playerSelection,computerSelection){
-    
+
+
+function playRound(){
+
+//print message for the player telling him the result
+
     if(playerSelection === computerSelection){
         return "It\'s a draw";
     }
@@ -44,18 +54,14 @@ function playRound(playerSelection,computerSelection){
     else if (playerSelection === "scissors" && computerSelection === "paper" ||
              playerSelection === "paper" && computerSelection === "rock" || 
              playerSelection === "rock" && computerSelection === "scissors"){
-        
-                return "Congratulations, you win!";
-   
+                return "Nice job!";  
             }
 
     else{
-        return "Good luck next time";
+        return "That's too bad!";
     }
+
 }
 
-console.log(playRound(playerSelection,computerSelection));
-
-//the game must be 5 rounds 
-
-//print message for the player telling him the result
+console.log (playRound());
+}
