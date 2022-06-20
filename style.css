@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px auto;
+}
+
+#playContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 450px;
+    border: 5px solid;
+    background-color: hsl(52, 85%, 74%);
+}
+
+.img {
+    width: 100px;
+    height: auto;
+}

@@ -1,8 +1,5 @@
 //The game is about picking rock, paper, scissors between the computer and a player
 
-//the game must be 5 rounds 
-for(i = 1; i <= 5; i++){
-    
 let options = ["rock", "paper", "scissors"];
 const computerSelection = computerPlay();
 
@@ -10,23 +7,37 @@ const computerSelection = computerPlay();
 //selection must compare and return expected result from the options variable
 
 
-let playerSelection =  prompt("Pick any of the three");
+const playerSelection =  document.querySelectorAll("[data-selection]");
 
-if (playerSelection.toLowerCase() === "rock") {
-    playerSelection = options[0];
-    
-}
-else if (playerSelection.toLowerCase() === "paper"){
-    playerSelection = options[1];
-}
 
-else if (playerSelection.toLowerCase() === "scissors"){
-    playerSelection = options[2];
+playerSelection.forEach(playerSelection => {
+    playerSelection.addEventListener("click", e => {
+        let selectionName = playerSelection.dataset.selection;
+        makeSelection (selectionName);
+        playRound();
+    }) 
+
+
+})
+
+function makeSelection(selection) {
+        console.log(selection);
+}
+// if (playerSelection.toLowerCase() === "rock") {
+//     playerSelection = options[0];
     
-}
-else {
-    alert("Remember to play you must pick either rock, paper or scissors");
-}
+// }
+// else if (playerSelection.toLowerCase() === "paper"){
+//     playerSelection = options[1];
+// }
+
+// else if (playerSelection.toLowerCase() === "scissors"){
+//     playerSelection = options[2];
+    
+// }
+// else {
+//     alert("Remember to play you must pick either rock, paper or scissors");
+// }
 
 console.log (playerSelection);
 
@@ -64,4 +75,4 @@ function playRound(){
 }
 
 console.log (playRound());
-}
+
