@@ -11,8 +11,8 @@ body {
 
 #playContainer {
     text-align: center;
-    width: 600px;
-    height: 450px;
+    width: 680px;
+    height: 530px;
     border: 5px solid;
     background-color: hsl(52, 85%, 74%);
 }
@@ -24,7 +24,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     height: 200px;
-    column-gap: 40px;
+    column-gap: 70px;
 }
 
 .header {
@@ -97,4 +97,21 @@ body {
     display: none;
     align-items: center;
     font-size: 22px;
+}
+
+.playGround {
+    display: none;
+    justify-content: space-evenly;
+    
+}
+.selectImgP1{
+    display: flex;
+    width: 100px;
+    height: auto;
+}
+
+.selectImgCPU{
+    display: flex;
+    width: 100px;
+    height: auto;
 }

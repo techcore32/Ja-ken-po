@@ -13,6 +13,9 @@ const message = document.querySelector(".result");
 const finalResult = document.querySelector(".finalResult");
 const win = document.querySelector(".win");
 const lost = document.querySelector(".lose");
+const matchResult = document.querySelector(".playGround");
+const userImg = document.querySelector(".selectImgP1");
+const PCImg = document.querySelector (".selectImgCPU");
 
 playerSelection.forEach(playerSelection => {
     playerSelection.addEventListener("click", e => {
@@ -26,8 +29,10 @@ function makeSelection(selection) {
     let computerSelection = computerPlay();
     let result = playRound(selection,computerSelection);
 
-
     message.innerText= result;
+    userImg.src = "Images/"+ selection+ ".png";
+    PCImg.src = "Images/"+ computerSelection+ ".png";
+    matchResult.style.display = "flex";
     console.log(selection);
     console.log(computerSelection);
     console.log(result);
@@ -44,6 +49,7 @@ function makeSelection(selection) {
         finalResult.style.display = "flex";
         let winner = message.remove();
     }
+
     if(lost.innerText === "5") {
         finalResult.innerText = "You couldn\'t keep with the master!"
         finalResult.style.display = "flex"
