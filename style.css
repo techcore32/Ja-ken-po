@@ -35,7 +35,7 @@ body {
 
 .message{
     flex: 1 1 100%;
-    font-size: 23px;
+    font-size: 22px;
     margin-top: 25px;
     margin-bottom: 10px;
     font-family: "Kdam Thmor Pro", sans-serif;
@@ -93,3 +93,8 @@ body {
     font-size: 22px;
 }
 
+.finalResult {
+    display: none;
+    align-items: center;
+    font-size: 22px;
+}

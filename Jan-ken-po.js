@@ -10,9 +10,9 @@ const options = ["rock", "paper", "scissors"];
 
 const playerSelection =  document.querySelectorAll("[data-selection]");
 const message = document.querySelector(".result");
-
-const win = 0;
-const lost = 0;
+const finalResult = document.querySelector(".finalResult");
+const win = document.querySelector(".win");
+const lost = document.querySelector(".lose");
 
 playerSelection.forEach(playerSelection => {
     playerSelection.addEventListener("click", e => {
@@ -25,28 +25,32 @@ function makeSelection(selection) {
 
     let computerSelection = computerPlay();
     let result = playRound(selection,computerSelection);
-    
+
+
     message.innerText= result;
     console.log(selection);
     console.log(computerSelection);
     console.log(result);
+    console.log (win.innerText);
+    console.log(lost.innerText);
 
-    // if(result === "win"){
-    //     return win+1;
-    // }
-
-    // else if (result === "lost") {
-    //     return lost+1;
-    // }
-
-    // else{
-    //     return ;
-    // }
+    if(result === "You win!") {
+        increaseScore(win);
+    }
+    if(result === "Better luck next time!") increaseScore(lost)
     
-    
-        
+    if (win.innerText === "5") {
+        finalResult.innerText = "You\'ve done it, congratulations"
+        finalResult.style.display = "flex";
+        let winner = message.remove();
+    }
+    if(lost.innerText === "5") {
+        finalResult.innerText = "You couldn\'t keep with the master!"
+        finalResult.style.display = "flex"
+        let loser = message.remove();;
+    }
+
 }
-
 
 //The computer must respond with a random string between those three options "computerPlay"
 function computerPlay(){
@@ -66,11 +70,15 @@ function playRound(selection,computerSelection) {
     else if (selection  === "scissors" && computerSelection === "paper" ||
     selection  === "paper" && computerSelection === "rock" || 
     selection  === "rock" && computerSelection === "scissors"){
-    return " You win!";  
+    return "You win!";  
 }
 
 else{
 return "Better luck next time!";
 }
+}
+
+function increaseScore(score){
+    score.innerText = parseInt(score.innerText)+1;
 }
 
