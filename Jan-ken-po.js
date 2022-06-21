@@ -23,8 +23,8 @@ playerSelection.forEach(playerSelection => {
     playerSelection.addEventListener("click", e => {
         let selection = playerSelection.dataset.selection;
         makeSelection (selection);
-    }) 
-})
+    });
+});
 
 function makeSelection(selection) {
 

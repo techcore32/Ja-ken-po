@@ -9,6 +9,7 @@ body {
     margin: 0px auto; 
 }
 
+/*startScreen styles */
 #startScreen {
  position: absolute;
  text-align: center;
@@ -16,6 +17,7 @@ body {
  height: 540px;
  border: 5px solid;
  background-color: hsl(52, 85%, 74%);
+ z-index: 100;
 }
 .startFunction{
  position: relative;
@@ -24,7 +26,7 @@ body {
  justify-content: center;
  align-items: center;
  flex-wrap: wrap;
- height: 400px;
+ height: 380px;
  padding-top: 10px;
 }
 
@@ -32,7 +34,8 @@ body {
     flex: 1 1 100%;
     font-size: 40px;
     font-weight: 700;
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-bottom: -12px;
 }
 .startMessage {
     font-size: 38px;
@@ -40,7 +43,7 @@ body {
 }
 
 
-.start {
+.start{
     font-size: 25px;
     width: 125px;
     border: 4px solid white;
@@ -49,11 +52,32 @@ body {
     background-color: hsl(52, 85%, 74%);
 }
 
+.start:active{
+    background-color: hsl(296, 75%, 85%) ;
+}
+
+
+.start_hover {
+    background-color: hsl(177, 100%, 75%);
+    width: 135px;
+}
+
+
 .footer{
     font-family: 'Cormorant Garamond', serif;
     font-size: 27px;
     font-weight: 700;
 }
+.footer a{
+    text-decoration: none;
+    color: black;
+}
+.footer a:hover{
+    color: hsl(0, 0%, 69%);
+    font-size: 28px;
+}
+
+/*playerArea styles */
 
 #playContainer {
     text-align: center;
@@ -61,6 +85,7 @@ body {
     height: 540px;
     border: 5px solid;
     background-color: hsl(52, 85%, 74%);
+    z-index: 50;
 }
 
 
@@ -160,4 +185,14 @@ body {
     display: flex;
     width: 100px;
     height: auto;
+}
+
+/*resultScreen styles */
+.screenResult {
+    position: absolute;
+    width: 680px;
+    height: 540px;
+    border: 5px solid;
+    background-color: hsl(52, 85%, 74%);
+    z-index: 1;
 }
