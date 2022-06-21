@@ -1,18 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0px auto;
-    
+    margin: 0px auto; 
+}
+
+#startScreen {
+ position: absolute;
+ text-align: center;
+ width: 680px;
+ height: 540px;
+ border: 5px solid;
+ background-color: hsl(52, 85%, 74%);
+}
+.startFunction{
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ height: 400px;
+ padding-top: 10px;
+}
+
+.headerStart {
+    flex: 1 1 100%;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+.startMessage {
+    font-size: 38px;
+    margin-bottom: 17px;
+}
+
+
+.start {
+    font-size: 25px;
+    width: 125px;
+    border: 4px solid white;
+    border-radius: 10px;
+    box-shadow: 3px 5px white;
+    background-color: hsl(52, 85%, 74%);
+}
+
+.footer{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-weight: 700;
 }
 
 #playContainer {
     text-align: center;
     width: 680px;
-    height: 530px;
+    height: 540px;
     border: 5px solid;
     background-color: hsl(52, 85%, 74%);
 }
