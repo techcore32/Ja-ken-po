@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="style.css">
         <title>Jan-ken-po</title>
         <script src="Alternate-screens.js" defer></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
         <script src="Jan-ken-po.js" defer></script>
     </head>
 
@@ -60,8 +61,6 @@
 
                 <div class="result"></div>
 
-                <div class="finalResult"></div>
-
                 <div class="CPUScore">
                     <div class="pc">CPU</div>
                     <div class="lose">0</div>
@@ -76,7 +75,31 @@
         </div>
 
         <!--ResultScreen-->
-        <div class="screenResult"></div>
+        <div id="screenResult">
+
+            <div class="headerEnd"> Jan-ken-po</div>
+            
+            <div class="finalResult">
+
+                <lottie-player class="winnerGif" src="https://assets8.lottiefiles.com/packages/lf20_touohxv0.json"  
+                speed="0.9"   loop autoplay></lottie-player>
+                <lottie-player class="loserGif" src="https://assets6.lottiefiles.com/packages/lf20_tl52xzvn.json"  
+                speed="0.9"   loop  autoplay></lottie-player>
+
+                <div class="finalMessage">
+                    <div class="winnerMessage">You've done it, congratulations</div>
+                    <div class="loserMessage">You couldn't keep with the master!</div>
+                </div>
+
+            </div>
+
+            <div class="restart">
+                <input class="goBackGame" type="image" src="Images/reloading.png" alt="reloadingIcon">
+                <input class="goBackStart" type="image" src="Images/home.png" alt="reloadingIcon">
+            </div>
+        </div>
+        
+        
             
     </body>
 </html>

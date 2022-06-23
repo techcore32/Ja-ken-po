@@ -3,7 +3,6 @@
 const options = ["rock", "paper", "scissors"];
 
 
-
 //The player must be able to choose between the three options (written or clickable) "playerSelection"
 //selection must compare and return expected result from the options variable
 
@@ -18,6 +17,8 @@ const lost = document.querySelector(".lose");
 const matchResult = document.querySelector(".playGround");
 const userImg = document.querySelector(".selectImgP1");
 const PCImg = document.querySelector (".selectImgCPU");
+
+const transition = document.querySelector (".screenResult")
 
 playerSelection.forEach(playerSelection => {
     playerSelection.addEventListener("click", e => {
@@ -48,18 +49,22 @@ function makeSelection(selection) {
     if(result === "Better luck next time!") increaseScore(lost)
     
     if (win.innerText === "5") {
-        finalResult.innerText = "You\'ve done it, congratulations"
-        finalResult.style.display = "flex";
+        // finalResult.innerText = "You\'ve done it, congratulations"
+        // finalResult.style.display = "flex";
+        transition.style.zIndex = 100;
         let winner = message.remove();
     }
 
     if(lost.innerText === "5") {
-        finalResult.innerText = "You couldn\'t keep with the master!"
-        finalResult.style.display = "flex"
+        // finalResult.innerText = "You couldn\'t keep with the master!"
+        // finalResult.style.display = "flex"
+        transition.style.zIndex = 100;
         let loser = message.remove();;
     }
 
 }
+
+
 
 //The computer must respond with a random string between those three options "computerPlay"
 function computerPlay(){
