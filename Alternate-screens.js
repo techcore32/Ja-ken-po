@@ -14,9 +14,69 @@ startRemover.addEventListener("mouseout", e => {
 
 startRemover.addEventListener("click", e => {
     
-    startContainer.remove();   
+    startContainer.style.display = "none";   
 });
 
+//end screen functions
 
 
+const reloadPage = document.querySelector(".goBackStart");
 
+reloadPage.addEventListener("click", e => {
+    window.location.reload();
+})
+
+const reloadGame = document.querySelector(".goBackGame");
+const endResult = document.getElementById("screenResult");
+const gameRestart = document.getElementById ("playContainer");
+
+const win = document.querySelector(".win");
+const lost = document.querySelector(".lose");
+
+const secondTransition = document.querySelector(".restart");
+const boxTransition = document.querySelector(".finalMessage");
+
+const winner = document.querySelector (".winnerGif");
+const winnerMessage = document.querySelector (".winnerMessage");
+
+const loser = document.querySelector (".loserGif");
+const loserMessage = document.querySelector (".loserMessage");
+
+reloadGame.addEventListener("click", e => {
+    
+    endResult.style.animation = "pullUpOut 1.2s";
+    goBack();
+
+    setTimeout (() => {
+        endResult.style.display = "none";
+        endResult.style.zIndex = "1";
+        endResult.style.animation = "null";
+    },1200); 
+
+    
+})
+
+function goBack(){
+    
+    document.querySelector(".playGround").style.display = "none";
+    document.querySelector(".result").style.display = "none";
+    win.innerText = parseInt(win.innerText)-parseInt(win.innerText);
+    lost.innerText = parseInt(lost.innerText)-parseInt(lost.innerText);
+
+    winner.pause();
+    loser.pause();
+
+    boxTransition.style.display = "none";
+    boxTransition.style.animation = "null";
+    
+    secondTransition.style.animation ="null";
+    secondTransition.style.display = "none";
+
+    winner.style.display = "none";
+    winnerMessage.style.display = "none";
+    winnerMessage.style.animation = "null";
+
+    loser.style.display = "none";
+    loserMessage.style.display = "none";
+    loserMessage.style.animation = "null";
+}

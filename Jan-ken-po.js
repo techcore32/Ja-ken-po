@@ -46,19 +46,23 @@ function makeSelection(selection) {
     userImg.src = "Images/"+ selection+ ".png";
     PCImg.src = "Images/"+ computerSelection+ ".png";
     matchResult.style.display = "flex";
-
+    message.style.display = "flex";
+    console.log(win.innerText);
+    
     if(result === "You win!") {
         increaseScore(win);
     }
     if(result === "Better luck next time!") increaseScore(lost)
 
     if (win.innerText === "5") {
+        transition.style.display = "block";
         transition.style.zIndex = 100;
         transition.style.animation = "dropDownIn 1.5s"; 
         winner.style.display = "block";
        
         setTimeout(() => {
             winner.play();
+            transition.style.animation = "null";
           }, 1000);
 
         setTimeout(() => {
@@ -75,12 +79,14 @@ function makeSelection(selection) {
     }
     
     if(lost.innerText === "5") {
+        transition.style.display = "block";
         transition.style.zIndex = 100;
         transition.style.animation = "dropDownIn 1.5s";
         loser.style.display = "block";
         
         setTimeout(() => {
             loser.play();
+            transition.style.animation = "null";
           }, 1000)
         
           setTimeout(() => {
