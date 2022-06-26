@@ -1,3 +1,5 @@
+
+
 //The game is about picking rock, paper, scissors between the computer and a player
 
 const options = ["rock", "paper", "scissors"];
@@ -18,7 +20,15 @@ const matchResult = document.querySelector(".playGround");
 const userImg = document.querySelector(".selectImgP1");
 const PCImg = document.querySelector (".selectImgCPU");
 
-const transition = document.querySelector (".screenResult")
+const transition = document.getElementById ("screenResult")
+const secondTransition = document.querySelector(".restart");
+const boxTransition = document.querySelector(".finalMessage");
+
+const winner = document.querySelector (".winnerGif");
+const winnerMessage = document.querySelector (".winnerMessage");
+
+const loser = document.querySelector (".loserGif");
+const loserMessage = document.querySelector (".loserMessage");
 
 playerSelection.forEach(playerSelection => {
     playerSelection.addEventListener("click", e => {
@@ -31,37 +41,60 @@ function makeSelection(selection) {
 
     let computerSelection = computerPlay();
     let result = playRound(selection,computerSelection);
-
+    
     message.innerText= result;
     userImg.src = "Images/"+ selection+ ".png";
     PCImg.src = "Images/"+ computerSelection+ ".png";
     matchResult.style.display = "flex";
 
-    console.log(selection);
-    console.log(computerSelection);
-    console.log(result);
-    console.log (win.innerText);
-    console.log(lost.innerText);
-
     if(result === "You win!") {
         increaseScore(win);
     }
     if(result === "Better luck next time!") increaseScore(lost)
-    
+
     if (win.innerText === "5") {
-        // finalResult.innerText = "You\'ve done it, congratulations"
-        // finalResult.style.display = "flex";
         transition.style.zIndex = 100;
-        let winner = message.remove();
-    }
+        transition.style.animation = "dropDownIn 1.5s"; 
+        winner.style.display = "block";
+       
+        setTimeout(() => {
+            winner.play();
+          }, 1000);
 
+        setTimeout(() => {
+          boxTransition.style.display = "flex";
+          boxTransition.style.animation = "borderIn 2.5s";
+        }, 2000);
+
+        setTimeout(() =>{
+            winnerMessage.style.display = "block";
+            winnerMessage.style.animation = "fadeIn 1.7s";
+            secondTransition.style.animation ="fadeIn 1.7s";
+            secondTransition.style.display = "flex";
+        },4000);
+    }
+    
     if(lost.innerText === "5") {
-        // finalResult.innerText = "You couldn\'t keep with the master!"
-        // finalResult.style.display = "flex"
         transition.style.zIndex = 100;
-        let loser = message.remove();;
-    }
+        transition.style.animation = "dropDownIn 1.5s";
+        loser.style.display = "block";
+        
+        setTimeout(() => {
+            loser.play();
+          }, 1000)
+        
+          setTimeout(() => {
+            boxTransition.style.display = "flex";
+            boxTransition.style.animation = "borderIn 2.5s";
+          }, 2000);
 
+        setTimeout(() =>{
+            loserMessage.style.display = "block";
+            loserMessage.style.animation = "fadeIn 1.7s";
+            secondTransition.style.animation ="fadeIn 1.7s";
+            secondTransition.style.display = "flex";
+        },4000);
+    }
 }
 
 

@@ -1,3 +1,4 @@
+
 //start screen functions
 
 const startContainer = document.getElementById("startScreen")
@@ -16,6 +17,6 @@ startRemover.addEventListener("click", e => {
     startContainer.remove();   
 });
 
-//End screen functions
 
-const endContainer = document.getElementById(".screenResult");
+
+

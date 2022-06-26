@@ -17,7 +17,7 @@ body {
  height: 540px;
  border: 5px solid;
  background-color: hsl(52, 85%, 74%);
- z-index: 0;
+ z-index: 100;
 }
 .startFunction{
  position: relative;
@@ -195,10 +195,22 @@ body {
     height: 540px;
     border: 5px solid;
     background-color: hsl(52, 85%, 74%);
-    z-index: 100; /*don't forget to change  for correct indexing */
+    z-index: 1; 
+    transform-origin: top;
+
 
 }
 
+@keyframes dropDownIn{
+    
+    from{
+        transform: scale(1,0);
+    }
+
+    to{
+        transform: scale(1,1);
+    }
+}
 .headerEnd {
     font-size: 40px;
     font-weight: 700;
@@ -213,7 +225,7 @@ body {
 
 }
 .winnerGif{
-    display: block;
+    display: none;
     position: absolute;
     width: 200px;
     bottom: 55%;
@@ -231,14 +243,13 @@ body {
 }
 
 .finalMessage{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     border: 5px solid;
     width: 500px;
     height: 275px;
     margin-top: 75px;
-    animation: borderIn 2.5s;
     /* animation-delay: 2s ; */
 }
 
@@ -276,7 +287,7 @@ body {
 }
 
 .winnerMessage{
-    display: block;
+    display: none;
     font-size: 24px;
     font-weight: 700;
 
@@ -289,7 +300,7 @@ body {
 }
 
 .restart {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
 }
 .goBackGame {
@@ -300,4 +311,14 @@ body {
 .goBackStart {
     width: 70px;
     height: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
