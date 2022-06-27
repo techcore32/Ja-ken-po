@@ -17,7 +17,7 @@ body {
  height: 540px;
  border: 5px solid;
  background-color: hsl(52, 85%, 74%);
- z-index: 100;
+ z-index: 90; /*change to original index after credit edit */
 }
 .startFunction{
  position: relative;
@@ -259,7 +259,7 @@ body {
     width: 500px;
     height: 275px;
     margin-top: 75px;
-    /* animation-delay: 2s ; */
+
 }
 
 @keyframes borderIn{
@@ -297,20 +297,24 @@ body {
 
 .winnerMessage{
     display: none;
+    width: 250px;
     font-size: 24px;
     font-weight: 700;
-
+    text-align: center;
 }
 
 .loserMessage{
     display: none   ;
+    width: 250px;
     font-size: 24px;
     font-weight: 700;
+    text-align: center;
 }
 
 .restart {
     display: none;
     justify-content: space-evenly;
+    align-items: center;
 }
 .goBackGame {
     width: 70px;
@@ -331,3 +335,75 @@ body {
         opacity: 1;
     }
 }
+
+.credits {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/*screenCredits styles */
+#screenCredits{
+    position: absolute;
+    width: 680px;
+    height: 540px;
+    border: 5px solid;
+    background-color: hsl(52, 85%, 74%);
+    z-index: 100; 
+    transform-origin: top;
+}
+
+.creditsHeader {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.textContainer {
+    width: 680px;
+    height: 325px;
+}
+
+.textContainer a:hover {
+    color: hsl(0, 0%, 69%);
+}
+h2 {
+    text-align: left;
+    margin: 20px 25px;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.paraText {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 30px;
+}
+.paraText a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.emptyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.returnEnd {
+    width: 60px;
+    height: auto;
+}
+

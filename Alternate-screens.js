@@ -26,6 +26,7 @@ reloadPage.addEventListener("click", e => {
     window.location.reload();
 })
 
+
 const reloadGame = document.querySelector(".goBackGame");
 const endResult = document.getElementById("screenResult");
 const gameRestart = document.getElementById ("playContainer");
@@ -63,8 +64,8 @@ function goBack(){
     win.innerText = parseInt(win.innerText)-parseInt(win.innerText);
     lost.innerText = parseInt(lost.innerText)-parseInt(lost.innerText);
 
-    winner.pause();
-    loser.pause();
+    winner.stop();
+    loser.stop();
 
     boxTransition.style.display = "none";
     boxTransition.style.animation = "null";
@@ -80,3 +81,11 @@ function goBack(){
     loserMessage.style.display = "none";
     loserMessage.style.animation = "null";
 }
+
+//credit page functions
+
+const creditPage = document.querySelector(".credits");
+
+creditPage.addEventListener("click", e => {
+    console.log("it worked");
+})

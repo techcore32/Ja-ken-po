@@ -47,7 +47,6 @@ function makeSelection(selection) {
     PCImg.src = "Images/"+ computerSelection+ ".png";
     matchResult.style.display = "flex";
     message.style.display = "flex";
-    console.log(win.innerText);
     
     if(result === "You win!") {
         increaseScore(win);
