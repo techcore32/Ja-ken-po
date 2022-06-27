@@ -350,8 +350,8 @@ body {
     height: 540px;
     border: 5px solid;
     background-color: hsl(52, 85%, 74%);
-    z-index: 100; 
-    transform-origin: top;
+    z-index: 1; 
+    transform-origin: left top;
 }
 
 .creditsHeader {
@@ -383,6 +383,7 @@ ul a {
 
 li {
     margin-bottom: 8px;
+    list-style: square;
 }
 
 .paraText {
@@ -407,3 +408,42 @@ li {
     height: auto;
 }
 
+@keyframes vanishIn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes vanishOut {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+@keyframes creditsIn {
+
+    from{
+        transform: scale(0,0);
+    }
+
+    to{
+        transform: scale(1,1);
+    }
+}
+
+@keyframes creditsOut {
+    from{
+        transform: scale(1,1);
+    }
+
+    to{
+        transform: scale(0,0);
+    }
+}

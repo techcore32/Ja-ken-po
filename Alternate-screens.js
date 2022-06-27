@@ -29,7 +29,6 @@ reloadPage.addEventListener("click", e => {
 
 const reloadGame = document.querySelector(".goBackGame");
 const endResult = document.getElementById("screenResult");
-const gameRestart = document.getElementById ("playContainer");
 
 const win = document.querySelector(".win");
 const lost = document.querySelector(".lose");
@@ -82,10 +81,43 @@ function goBack(){
     loserMessage.style.animation = "null";
 }
 
+
+
 //credit page functions
 
-const creditPage = document.querySelector(".credits");
+const creditsBringer = document.querySelector(".credits");
+const creditsPage = document.getElementById("screenCredits");
+const creditsReturner = document.querySelector(".returnEnd");
+const vanishCredits = document.querySelector(".textContainer");
 
-creditPage.addEventListener("click", e => {
-    console.log("it worked");
-})
+creditsBringer.addEventListener("click", e => {
+    
+    creditsPage.style.zIndex = "100";
+    endResult.style.zIndex = "90";
+    vanishCredits.style.animation = "vanishIn 1.2s";
+    creditsReturner.style.animation = "vanishIn 1.2s";
+
+    creditsPage.style.animation = "creditsIn 1.5s";
+    setTimeout(()=>{
+        creditsPage.style.animation = "null";
+        vanishCredits.style.animation = "null";
+        creditsReturner.style.animation = "null";
+    },1500);
+
+});
+
+creditsReturner.addEventListener("click", e => {
+    
+    endResult.style.zIndex = "100";
+
+    creditsPage.style.animation = "creditsOut 1s";
+    vanishCredits.style.animation = "vanishOut 0.7s";
+    creditsReturner.style.animation = "vanishOut 0.7s";
+
+    setTimeout(()=>{
+        creditsPage.style.animation = "null";
+        vanishCredits.style.animation = "null";
+        creditsReturner.style.animation = "null";
+        creditsPage.style.zIndex = "1";
+    },700);
+});
