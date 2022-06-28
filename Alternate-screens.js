@@ -60,9 +60,11 @@ function goBack(){
     
     document.querySelector(".playGround").style.display = "none";
     document.querySelector(".result").style.display = "none";
+    document.querySelector (".invisibleScreen").style.display = "none";
+    
     win.innerText = parseInt(win.innerText)-parseInt(win.innerText);
     lost.innerText = parseInt(lost.innerText)-parseInt(lost.innerText);
-
+    
     winner.stop();
     loser.stop();
 

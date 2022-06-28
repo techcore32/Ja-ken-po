@@ -19,6 +19,7 @@ const lost = document.querySelector(".lose");
 const matchResult = document.querySelector(".playGround");
 const userImg = document.querySelector(".selectImgP1");
 const PCImg = document.querySelector (".selectImgCPU");
+const pickLock = document.querySelector (".invisibleScreen");
 
 const transition = document.getElementById ("screenResult")
 const secondTransition = document.querySelector(".restart");
@@ -47,17 +48,19 @@ function makeSelection(selection) {
     PCImg.src = "Images/"+ computerSelection+ ".png";
     matchResult.style.display = "flex";
     message.style.display = "flex";
-    
+
+
     if(result === "You win!") {
         increaseScore(win);
     }
-    if(result === "Better luck next time!") increaseScore(lost)
+    if(result === "Better luck next time!") increaseScore(lost);
 
     if (win.innerText === "5") {
         transition.style.display = "block";
         transition.style.zIndex = 100;
         transition.style.animation = "dropDownIn 1.5s"; 
         winner.style.display = "block";
+        pickLock.style.display = "block";
        
         setTimeout(() => {
             winner.play();
@@ -82,6 +85,7 @@ function makeSelection(selection) {
         transition.style.zIndex = 100;
         transition.style.animation = "dropDownIn 1.5s";
         loser.style.display = "block";
+        pickLock.style.display = "block";
         
         setTimeout(() => {
             loser.play();
