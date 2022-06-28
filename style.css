@@ -7,6 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0px auto; 
+    background-color: hsl(0, 0%, 85%);
 }
 
 /*startScreen styles */
@@ -17,7 +18,7 @@ body {
  height: 540px;
  border: 5px solid;
  background-color: hsl(52, 85%, 74%);
- z-index: 90; /*change to original index after credit edit */
+ z-index: 100; /*change to original index after credit edit */
 }
 .startFunction{
  position: relative;
@@ -62,16 +63,17 @@ body {
     width: 135px;
 }
 
-
 .footer{
     font-family: 'Cormorant Garamond', serif;
     font-size: 27px;
     font-weight: 700;
 }
+
 .footer a{
     text-decoration: none;
     color: black;
 }
+
 .footer a:hover{
     color: hsl(0, 0%, 69%);
     font-size: 28px;
@@ -193,8 +195,6 @@ body {
     background-color: hsl(52, 85%, 74%);
     z-index: 1; 
     transform-origin: top;
-
-
 }
 
 @keyframes dropDownIn{
@@ -447,3 +447,227 @@ li {
         transform: scale(0,0);
     }
 }
+@media (max-width: 449px){
+
+    #startScreen {
+        width: 368px;
+        height: 650px;
+    }
+
+    #playContainer {
+        width: 368px;
+        height: 650px;
+    }
+
+    .playerSelection {
+        height: 275px;
+    }
+    
+    .result {
+        font-size: 20px;
+        width: 150px;
+    }
+
+    #screenResult {
+        width: 368px;
+        height: 650px;
+    }
+
+    .winnerGif{
+        bottom: 63%;
+        width: 200px;
+        height: auto;
+    } 
+    
+    .loserGif {
+        top: 13%;
+        width: 105px;
+        height: auto;
+    }
+    
+    .finalMessage{
+        width: 340px;
+        height: 375px;
+    }
+
+    @keyframes borderIn{
+
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+    
+        25%{
+            width: 340px;
+            height: 0px;
+    
+        }
+    
+        50% { 
+            height: 375px;
+        }
+    
+        100% {
+        }
+    }
+    .restart{
+        height: 300px;
+    }
+    #screenCredits{
+        width: 368px;
+        height: 650px;
+    }
+
+    .textContainer {
+        width: 368px;
+        height: 450px;
+    }
+
+    
+}
+
+
+    
+@media (min-width:450px) and (max-width:595px){
+       
+    #startScreen {
+        width: 450px;
+        height: 600px;
+    }
+
+        
+    #playContainer {
+        width: 450px;
+        height: 600px;
+    }
+
+    .playerSelection{
+        column-gap: 50px;
+    }
+        
+    #screenResult {
+        width: 450px;
+        height: 600px;
+    }
+
+    .finalResult{
+        height: 435px;
+    }
+
+    .winnerGif{
+        bottom: 59%;
+        width: 200px;
+        height: auto;
+    } 
+    
+    .loserGif {
+        top: 15%;
+        width: 105px;
+        height: auto;
+    }
+
+
+    .finalMessage{
+        width: 400px;
+        height: 325px;
+    }
+    
+    @keyframes borderIn{
+    
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+        
+        25%{
+            width: 400px;
+            height: 0px; 
+        }
+        
+        50% { 
+            height: 325px;
+        }
+        
+        100% {
+        }
+    }
+
+    #screenCredits{
+        width: 450px;
+        height: 600px;
+    }
+
+    .textContainer {
+        width: 450px;
+        height: 400px;
+    }   
+}
+
+@media (min-width:596px) and (max-width:700px){
+       
+    #startScreen {
+        width: 585px;
+        height: 550px;
+    }
+
+        
+    #playContainer {
+        width: 585px;
+        height: 550px;
+
+    }
+        
+    #screenResult {
+        width: 585px;
+        height: 550px;
+
+    }
+
+    .winnerGif{
+        bottom: 57%;
+        width: 200px;
+        height: auto;
+    } 
+    
+    .loserGif {
+        top: 16%;
+        width: 105px;
+        height: auto;
+    }
+
+
+    .finalMessage{
+        width: 530px;  
+    }
+    
+    @keyframes borderIn{
+    
+        0% {
+            width: 0px;
+            height: 0px;
+        }
+        
+        25%{
+            width: 530px;
+            height: 0px; 
+        }
+        
+        50% { 
+            height: 275px;
+        }
+        
+        100% {
+        }
+    }
+
+    #screenCredits{
+        width: 585px;
+        height: 550px;
+    }
+
+    .textContainer {
+        width: 585px;
+        height: 360px;
+    }   
+}
+
