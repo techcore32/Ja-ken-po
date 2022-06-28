@@ -6,11 +6,151 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width = device-width, initial-scale = 1">
         <link rel="stylesheet" href="style.css">
-        <title>Ja-ken-po</title>
-        
+        <title>Jan-ken-po</title>
+        <script src="Alternate-screens.js" type="module"  defer></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
+        <script src="Jan-ken-po.js" type="module" defer></script>
     </head>
 
     <body>
-        <script src="Ja-ken-po.js"></script>
+
+        <!--startScreen-->
+        
+        <div id="startScreen">
+
+            <div class="headerStart"> Jan-ken-po</div>
+            
+            <div class="startFunction">
+                <div class="startMessage">Press start to begin</div>
+                <button class="start">Start</button>
+            </div>
+        
+            <div class="footer">Created by <a href="https://www.linkedin.com/in/diego-rojas-t%C3%A9llez/">
+                Diego Rojas Téllez</a></div>
+
+            <div class="footer">©2022</div>
+        </div>
+        
+        <!-- playerArea-->
+
+        <div id="playContainer">
+
+            <div class="header"> Jan-ken-po</div>
+            
+            
+
+            <div class="playerSelection">
+                
+                <div class="message">Pick one!</div>
+
+                <input  class="img" data-selection="rock" 
+                        type="image" src="Images/rock.png" alt="hand-shaping-rock">
+                
+                <input  class="img" data-selection="paper" type="image" 
+                        src="Images/paper.png" alt="hand-shaping-paper">
+                
+                <input  class="img" data-selection="scissors" type="image" 
+                        src="Images/scissors.png" alt="hand-shaping-scissors">
+
+            </div>
+
+            <div class="scoreBoard">
+
+                <div class="playerScore">
+                    <div class="player">Player</div>
+                    <div class="win">0</div>
+                </div>
+
+                <div class="result"></div>
+
+                <div class="CPUScore">
+                    <div class="pc">CPU</div>
+                    <div class="lose">0</div>
+                </div>
+            </div>
+
+            <div class="playGround ">
+                <img class="selectImgP1" src="Images/rock.png" alt="hand-shaping-rock">
+                <img class="selectImgCPU" src="Images/rock.png" alt="hand-shaping-rock">
+            </div>
+            
+        </div>
+
+        <!--ResultScreen-->
+        <div id="screenResult">
+
+            <div class="headerEnd"> Jan-ken-po</div>
+            
+            <div class="finalResult">
+
+                <lottie-player class="winnerGif" src="https://assets8.lottiefiles.com/packages/lf20_touohxv0.json"  
+                speed="0.9" pause></lottie-player>
+                <lottie-player class="loserGif" src="https://assets6.lottiefiles.com/packages/lf20_tl52xzvn.json"  
+                speed="0.9" pause></lottie-player>
+
+                <div class="finalMessage">
+                    <div class="winnerMessage">You've done it, congratulations</div>
+                    <div class="loserMessage">You couldn't keep with the master!</div>
+                </div>
+
+            </div>
+
+            <div class="restart">
+                <input class="goBackGame" type="image" src="Images/reloading.png" alt="reloadingIcon">
+                <a class="credits" href="#" >Credits</a>
+                <input class="goBackStart" type="image" src="Images/home.png" alt="reloadingIcon">
+                
+            </div>
+        </div>
+        
+        <!--creditScreen-->
+
+        <div id="screenCredits">
+
+            <div class="creditsHeader">Jan-ken-po</div>
+           
+            <div class="textContainer">
+
+                <h2>Visual Assets:</h2>
+
+                <ul>
+                    <li><a href="https://www.vecteezy.com/free-vector/rock-paper-scissors"
+                        title="Play Buttons">Rock Paper Scissors</a> 
+                        Vectors by <a href="https://www.vecteezy.com/">Vecteezy</a></li>
+
+                    <li><a href="https://lottiefiles.com/107653-trophy" 
+                        title="success attempt">Win Animation</a> animation created by Mahendra Bhunwal - 
+                        <a href="https://lottiefiles.com/">Lottiefiles</a></li>
+
+                    <li><a href="https://lottiefiles.com/94303-failed" 
+                        title="failed attempt">Failed Animation</a> animation created by Vipul Chandra - 
+                        <a href="https://lottiefiles.com/">Lottiefiles</a></li>
+
+                    <li><a href="https://www.flaticon.com/free-icons/home-button" 
+                        title="home button icons">Home button</a> icons created by Freepik - 
+                        <a href="https://www.flaticon.com/">Flaticon</a></li>
+
+                    <li><a href="https://www.flaticon.com/free-icons/reload" 
+                        title="reload icons">Reload icons </a> created by kosonicon -
+                         <a href="https://www.flaticon.com/">Flaticon</a></li>
+
+                    <li><a href="https://www.flaticon.com/free-icons/undo" 
+                        title="undo icons">Undo icons</a> created by Freepik - 
+                         <a href="https://www.flaticon.com/">Flaticon</a></li>
+                </ul>
+
+                <h2>Developed and Designed by:</h2>
+
+            
+                <div class="paraText"><a href="https://www.linkedin.com/in/diego-rojas-t%C3%A9llez/">
+                    Diego Rojas Téllez</a></div>
+            </div>
+
+            <div class="emptyContainer">
+                <input class="returnEnd" type="image" src="Images/left-turn-arrow.png" alt="go-back-icon"> 
+            </div>
+
+        </div>
+            
     </body>
 </html>
