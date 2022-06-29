@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
 
+
 body {
     display: flex;
     align-items: center;
@@ -455,15 +456,19 @@ li {
     }
 }
 @media (min-width:320px) and (max-width: 449px){
+    
 
+    body {
+        height: 100%;
+    }
 
     #startScreen {
-        width: 310px;
+        width: 95%;
         height: 700px;
     }
 
     #playContainer {
-        width: 310px;
+        width: 95%;
         height: 700px;
     }
 
@@ -471,6 +476,9 @@ li {
         height: 275px;
     }
     
+    .invisibleScreen{
+        width: 85%;
+    }
     .scoreBoard{
         justify-content: space-evenly;
     }
@@ -482,7 +490,7 @@ li {
     }
     
     #screenResult {
-        width: 310px;
+        width: 95%;
         height: 700px;
     }
 
@@ -502,7 +510,7 @@ li {
     }
     
     .finalMessage{
-        width: 280px;
+        width: 85%;
         height: 400px;
     }
 
@@ -514,7 +522,7 @@ li {
         }
     
         25%{
-            width: 280px;
+            width: 85%;;
             height: 0px;
     
         }
@@ -530,12 +538,12 @@ li {
         height: 200px;
     }
     #screenCredits{
-        width: 310px;
+        width: 95%;
         height: 700px;
     }
 
     .textContainer {
-        width: 300px;
+        width: 90%;
         height: 500px;
     }
 
@@ -545,15 +553,16 @@ li {
 
     
 @media (min-width:450px) and (max-width:595px){
-       
+    
+
     #startScreen {
-        width: 450px;
+        width: 95%;
         height: 600px;
     }
 
         
     #playContainer {
-        width: 450px;
+        width: 95%;
         height: 600px;
     }
 
@@ -562,7 +571,7 @@ li {
     }
         
     #screenResult {
-        width: 450px;
+        width: 95%;
         height: 600px;
     }
 
@@ -584,7 +593,7 @@ li {
 
 
     .finalMessage{
-        width: 400px;
+        width: 85%;
         height: 325px;
     }
     
@@ -596,7 +605,7 @@ li {
         }
         
         25%{
-            width: 400px;
+            width: 85%;
             height: 0px; 
         }
         
@@ -609,32 +618,32 @@ li {
     }
 
     #screenCredits{
-        width: 450px;
+        width: 95%;
         height: 600px;
     }
 
     .textContainer {
-        width: 450px;
-        height: 400px;
+        width: 97%;
+        height: 410px;
     }   
 }
 
 @media (min-width:596px) and (max-width:700px){
        
     #startScreen {
-        width: 585px;
+        width: 95%;
         height: 550px;
     }
 
         
     #playContainer {
-        width: 585px;
+        width: 95%;
         height: 550px;
 
     }
         
     #screenResult {
-        width: 585px;
+        width: 95%;
         height: 550px;
 
     }
@@ -653,7 +662,7 @@ li {
 
 
     .finalMessage{
-        width: 530px;  
+        width: 85%;  
     }
     
     @keyframes borderIn{
@@ -664,7 +673,7 @@ li {
         }
         
         25%{
-            width: 530px;
+            width: 85%;
             height: 0px; 
         }
         
@@ -677,12 +686,12 @@ li {
     }
 
     #screenCredits{
-        width: 585px;
+        width: 95%;
         height: 550px;
     }
 
     .textContainer {
-        width: 585px;
+        width: 90%;
         height: 360px;
     }   
 }

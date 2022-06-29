@@ -83,8 +83,6 @@ function goBack(){
     loserMessage.style.animation = "null";
 }
 
-
-
 //credit page functions
 
 const creditsBringer = document.querySelector(".credits");
